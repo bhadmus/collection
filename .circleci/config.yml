@@ -3,11 +3,12 @@ orbs:
   newman: postman/newman@0.0.2
 jobs:
   build:
-    newman-collection-run:
+    newman-collection-run-env-timeout:
     executor: newman/postman-newman-docker
     steps:
       - checkout
       - newman/newman-run:
           collection: ./collection/Training.postman_collection.json
           environment: ./env/LAMP_S.postman_environment.json
+          timeout: '10000'
 
