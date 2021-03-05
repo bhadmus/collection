@@ -10,5 +10,4 @@ jobs:
       - newman/newman-run:
           collection: ./collection/Training.postman_collection.json
           environment: ./env/LAMP_S.postman_environment.json
-          timeout: '10000'
 
