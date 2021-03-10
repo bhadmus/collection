@@ -8,6 +8,10 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install jq
+          command: |
+            brew install jq
+      - run:
           name: Convert json
           command: |
             jq -c '.Training.postman_collection | fromjson' ./collection/Training.postman_collection.json
