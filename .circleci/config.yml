@@ -10,7 +10,7 @@ jobs:
       - run:
           name: Install jq
           command: |
-            wget http://security.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.4_amd64.deb
+            wget http://security.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.6.1_amd64.deb
             dpkg -i apt_1.4_amd64.deb
             apt-get install jq
       - run:
