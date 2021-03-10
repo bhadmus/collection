@@ -7,6 +7,10 @@ jobs:
     executor: newman/postman-newman-docker
     steps:
       - checkout
+      - run:
+          name: Convert json
+          command: |
+            jq -c '.Training.postman_collection | fromjson' ./collection/Training.postman_collection.json
       - newman/newman-run:
           collection: ./collection/Training.postman_collection.json
           environment: ./env/LAMP_S.postman_environment.json
