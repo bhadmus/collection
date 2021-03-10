@@ -10,7 +10,7 @@ jobs:
       - run:
           name: Install jq
           command: |
-            mount -o remount,rw /
+            mount -o remount,rw
             wget http://security.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.6.1_amd64.deb
             sudo dpkg -i apt_1.6.1_amd64.deb
             apt-get install jq
